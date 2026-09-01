@@ -1,0 +1,45 @@
+Qual è il numero di porta TCP di origine?
+Il numero della porta TCP di origine è 42446.
+
+Come classificheresti la porta di origine?
+La porta TCP di origine 42446 è una porta effimera, cioè una porta temporanea scelta dal sistema client per instaurare la connessione.
+
+Qual è il numero di porta TCP di destinazione?
+Il numero della porta TCP di destinazione è 80.
+
+Come classificheresti la porta di destinazione?
+La porta TCP di destinazione 80 è una porta associata al protocollo HTTP.
+
+Quale flag è impostato?
+Nel primo pacchetto è impostato il flag SYN.
+
+A quale valore è impostato il numero di sequenza relativo?
+Il numero di sequenza relativo è impostato a 0.
+
+
+Quali sono i valori delle porte di origine e destinazione?
+La porta TCP di origine è 80, mentre la porta TCP di destinazione è 42446.
+
+Quali flag sono impostati?
+Nel secondo pacchetto sono impostati i flag SYN e Acknowledgment (ACK).
+
+A quali valori sono impostati i numeri relativi di sequenza e acknowledgment?
+Il numero di sequenza relativo è impostato a 0, mentre il numero di acknowledgment relativo è impostato a 1.
+
+Quale flag è impostato?
+Nel terzo pacchetto è impostato solamente il flag Acknowledgment (ACK).
+
+
+Cosa fa l'opzione -r?
+L'opzione -r permette a tcpdump di leggere e analizzare un file di cattura in formato pcap o pcapng precedentemente salvato.
+
+
+1. Ci sono centinaia di filtri disponibili in Wireshark. Una rete di grandi dimensioni potrebbe avere numerosi filtri e molti tipi diversi di traffico. Elenca tre filtri che potrebbero essere utili a un amministratore di rete.
+
+Oltre al filtro TCP, un amministratore di rete potrebbe utilizzare:
+
+1. Un filtro per indirizzo IP: inserendo nella barra dei filtri ip.src == indirizzo_ip oppure ip.dst == indirizzo_ip è possibile visualizzare il traffico generato o ricevuto da uno specifico indirizzo IP.
+
+2. Un filtro per porta: utilizzando, ad esempio, tcp.port == 80 è possibile visualizzare solamente il traffico TCP relativo a una determinata porta.
+
+3. Un filtro per intervallo temporale: utilizzando frame.time >= "..." && frame.time <= "..." è possibile limitare la visualizzazione ai pacchetti acquisiti in una determinata fascia di tempo.

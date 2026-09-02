@@ -1,0 +1,35 @@
+Quali sono gli indirizzi MAC di origine e destinazione?
+L'indirizzo MAC di origine è 08:00:27:8a:35:d2, mentre l'indirizzo MAC di destinazione è 52:54:00:12:35:00.
+
+A quali interfacce di rete sono associati questi indirizzi MAC?
+L'indirizzo MAC 08:00:27:8a:35:d2 è associato all'interfaccia eth0 della macchina, mentre l'indirizzo MAC 52:54:00:12:35:00 è associato all'interfaccia del gateway della rete virtuale.
+
+Quali sono gli indirizzi IP di origine e destinazione?
+L'indirizzo IP di origine è 10.0.2.15, mentre l'indirizzo IP di destinazione è 8.8.8.8.
+
+Quali sono le porte di origine e destinazione?
+La porta di origine è 39988, mentre la porta di destinazione è 53.
+
+Qual è il numero di porta DNS predefinito?
+Il numero di porta predefinito utilizzato dal protocollo DNS è la porta 53.
+
+Confrontare gli indirizzi MAC e IP nei risultati di Wireshark con gli indirizzi IP e MAC. Qual è la tua osservazione?
+L'indirizzo IP 10.0.2.15 e l'indirizzo MAC 08:00:27:8a:35:d2 del PC corrispondono a quelli individuati dalla cattura Wireshark come indirizzi di origine.
+
+Quali sono gli indirizzi MAC e IP e i numeri di porta di origine e destinazione?
+Nel pacchetto di risposta DNS, l'indirizzo MAC di origine è 52:54:00:12:35:00 e quello di destinazione è 08:00:27:8a:35:d2. L'indirizzo IP di origine è 8.8.8.8, mentre quello di destinazione è 10.0.2.15. La porta di origine è 53 e la porta di destinazione è 39988.
+
+Come si confrontano con gli indirizzi nei pacchetti di query DNS?
+Nel pacchetto di risposta del server DNS, gli indirizzi e le porte sono gli stessi della query ma risultano invertiti: quelli di origine diventano di destinazione e viceversa.
+
+Il server DNS può fare query ricorsive?
+Sì, il server può effettuare query ricorsive. Nella sezione Flags si vede infatti che il valore di "Recursion available: Server can do recursive queries" è impostato su 1.
+
+Come si confrontano i risultati con quelli di nslookup?
+I risultati coincidono: sia Wireshark sia nslookup indicano come canonical name di www.cisco.com il nome www.cisco.com.akadns.net e mostrano l'indirizzo IPv4 risultante dalla risoluzione DNS, 72.246.30.52.
+
+1. Dai risultati di Wireshark, cos'altro puoi imparare sulla rete quando rimuovi il filtro?
+Rimuovendo il filtro si può osservare anche traffico ARP. In particolare, la macchina 10.0.2.15 individua l'indirizzo MAC associato al gateway 10.0.2.2, cioè 52:54:00:12:35:00.
+
+2. Come può un attaccante usare Wireshark per compromettere la sicurezza della tua rete?
+Un attaccante potrebbe usare Wireshark per individuare indirizzi IP e MAC, protocolli e traffico presente sulla rete. Queste informazioni potrebbero poi essere utilizzate per pianificare attacchi come ARP spoofing o DNS spoofing.

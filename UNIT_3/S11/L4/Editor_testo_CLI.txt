@@ -1,0 +1,23 @@
+Sei riuscito a trovare subito space.txt?
+No, space.txt non viene visualizzato subito perché SciTE, per impostazione predefinita, mostra solo i file con estensioni riconosciute e .txt non è compresa tra queste. Per visualizzarlo è necessario selezionare All Files (*).
+
+Perché il prompt non viene mostrato nel terminale?
+Il prompt non viene mostrato perché SciTE è stato avviato dal terminale come processo in primo piano. La shell attende quindi la terminazione del programma prima di restituire il prompt. Chiudendo SciTE oppure interrompendolo con CTRL+C, il prompt viene nuovamente visualizzato.
+
+Quale carattere usa nano per rappresentare che una linea continua oltre i bordi dello schermo?
+Nano utilizza i caratteri maggiore > e minore <, cioè le parentesi uncinate, per indicare che una riga continua oltre i bordi dello schermo: > indica che la riga continua verso destra, mentre < indica che continua verso sinistra.
+
+Perché i file di configurazione delle applicazioni utente sono salvati nella directory home dell'utente e non sotto /etc con tutti gli altri file di configurazione a livello di sistema?
+I file di configurazione delle applicazioni utente sono salvati nella directory home perché contengono impostazioni specifiche per il singolo utente, che può modificarle senza privilegi di root. I file presenti sotto /etc, invece, contengono generalmente configurazioni a livello di sistema e possono influenzare tutti gli utenti.
+
+Anche la finestra del terminale che era già aperta ha cambiato colore da verde a rosso? Spiega.
+No, la finestra del terminale già aperta non ha cambiato colore, perché la shell in esecuzione aveva già caricato il precedente contenuto del file .bashrc. La modifica viene applicata alle nuove shell, ad esempio aprendo un nuovo terminale oppure eseguendo nuovamente bash.
+
+A cosa si riferisce il messaggio di errore?
+Il messaggio di errore indica che nginx non riesce a eseguire il bind sull'indirizzo 0.0.0.0 e sulla porta TCP 8080, perché la porta è già utilizzata da un altro processo o da un'altra istanza del servizio. Per questo motivo nginx non riesce a mettersi in ascolto sulla porta configurata.
+
+Appare la pagina web?
+No. Dopo aver arrestato il server web nginx, la pagina non è più raggiungibile perché non è presente alcun servizio in ascolto su 127.0.0.1:8080. Il browser restituisce quindi l'errore Unable to connect.
+
+Puoi modificare il file /etc/nginx/custom_server.conf con SciTE? Descrivi il processo di seguito.
+Sì, è possibile modificare il file con SciTE. Poiché il file si trova nella directory /etc, è necessario avviare SciTE con privilegi di root dal terminale utilizzando il comando sudo scite. Una volta aperto il programma, si può selezionare File > Open, scegliere All Files (*) e raggiungere il percorso /etc/nginx/custom_server.conf. Dopo aver aperto il file, è possibile modificarlo e salvare normalmente le modifiche grazie ai privilegi ottenuti con sudo.
